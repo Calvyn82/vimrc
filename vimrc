@@ -8,9 +8,20 @@ set ruler " Show cursor position.
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 execute pathogen#infect()
 
+let mapleader = "\<Space>"
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+nmap <Leader><Leader> V
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 if executable('ag')
